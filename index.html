@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Glxy</title>
+  <title>BTD4</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<canvas id="C"></canvas>
-<!-- partial -->
+  <iframe id="embededGame" title="Inline Frame Example" width="1280" height="720" src="https://www.addictinggames.com/embed/html5-games/20543">
+  </iframe>
+
+  <button img="Fullscreen.png" onclick="goFullscreen('embededGame'); return false">Fullscreen</button>
+ 
+  <script>
+  function goFullscreen(id) {
+      var element = document.getElementById(id);
+      if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+      }
+  }
+  </script>
+
   <script  src="./script.js"></script>
 
 </body>
